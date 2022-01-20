@@ -13,11 +13,11 @@ class News {
 
   print() {
     document.write(`<h1>${this._head}</h1>`);
-    if (this._now.getDay() == this._date) {
+    if (this._now.getDate() == this._date) {
       document.writeln(`сегодня`);
     } else if (this._date > 1 && this._date < 7) {
       document.writeln(
-        `${parseInt(this._now.getDay()) - parseInt(this._date)} дней назад`
+        `${parseInt(this._now.getDate()) - parseInt(this._date)} дней назад`
       );
     } else {
       document.writeln(`${this._date}`);
